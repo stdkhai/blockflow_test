@@ -267,3 +267,35 @@ section.reorder{
 i{
     color: var(--gray-500);
 }
+
+@media (max-width: 669px) {
+    .wrapper{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .wrapper .content{
+        padding: 0 10px;
+    }
+
+    section.state-progress .circle{
+        height: 2em;
+        width: 2em;
+    }
+
+    section.state-progress{
+        font-size: 3vw;
+        white-space:nowrap;
+    }
+
+    section.info{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    section.info .content, section.info .vizualize{
+        width: 100%;
+        margin: 5px 25px;
+    }
+}
