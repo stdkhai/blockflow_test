@@ -24,15 +24,15 @@
         <div class="content">
             <h1>Start</h1>
             <section class="state-progress">
-                <div class="step-block">
-                    <div class="step completed">
+                <div class="step-block completed">
+                    <div class="step">
                         <div class="circle"></div>
                         <div class="state">Стан 1</div>
                     </div>
                     <div class="connector"></div>
                 </div>
-                <div class="step-block">
-                    <div class="step completed">
+                <div class="step-block completed">
+                    <div class="step">
                         <div class="circle"></div>
                         <div class="state">Стан 2</div>
                     </div>
@@ -87,7 +87,8 @@
                     <h2>Перезамовте багаж</h2>
                     <div class="row">
                         <label for="dropdown1">Dropdown</label>
-                        <select name="dropdown1" id="">
+                        <select name="dropdown1" id="" >
+                            <option value="" selected disabled hidden>Choose here</option>
                             <option value="foo1">Foo 1</option>                        
                             <option value="foo2">Foo 2</option>
                             <option value="foo3">Foo 3</option>
@@ -96,12 +97,13 @@
                     <div class="row">
                         <label for="dropdown2">Dropdown</label>
                         <select name="dropdown2" id="">
+                            <option value="" selected disabled hidden>Choose here</option>
                             <option value="foo1">Foo 1</option>                        
                             <option value="foo2">Foo 2</option>
                             <option value="foo3">Foo 3</option>
                         </select>
                     </div>
-                    <button type="submit">Done</button>
+                    <button id="done" type="submit">Done</button>
                 </form>
             </section>
         </div>

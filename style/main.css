@@ -1,4 +1,5 @@
 :root {
+    /* colors */
     --base: #FFFFFF;
     --gray-200: #EAECF0;
     --gray-500: #667085;
@@ -11,6 +12,9 @@
     --dropdown-back: #F9FAFB;
     --hover-green: #1FC0AE30;
     --block-background: #F6F7FA;
+
+    /* shadows */
+    --circle-shadow: 0px 10px 10px 1px rgba(16, 24, 40, 0.1);
 }
 
 :active,
@@ -25,12 +29,14 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    color: var(--main-text);
     font-weight: normal;
     min-height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--block-background);
 }
 
 html {
@@ -45,12 +51,13 @@ html {
 }
 
 
-a{
+a {
     text-decoration: none;
+    color: var(--main-text);
 }
 
-a:hover{
-    text-decoration: underline;
+a:hover {
+    text-decoration: none;
 }
 
 img {
@@ -66,3 +73,170 @@ img {
     flex-wrap: nowrap;
 }
 
+.nav-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.nav-side ul {
+    list-style-type: none;
+
+}
+
+.wrapper>.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 50px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.content .state-progress {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+
+.state-progress .step-block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.step-block .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secondary-text);
+}
+
+.step-block.completed .step {
+    color: var(--main-text);
+}
+
+.step .circle {
+    width: 72px;
+    height: 72px;
+    background-color: var(--background);
+    border-radius: 72px;
+    box-shadow: var(--circle-shadow);
+}
+
+.step-block.completed .circle {
+    background-color: var(--green);
+}
+
+.step .state {
+    margin: 1em 0 0 0;
+}
+
+.step-block.completed .connector {
+    width: 100%;
+    height: 0;
+    border: 1px dashed var(--blue);
+    margin: 0 10px 2em 10px
+}
+
+section.info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+section.info .content,
+section.info .vizualize {
+    background-color: var(--base);
+    width: 50%;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.info .vizualize { 
+    color: var(--green);
+}
+
+h2{
+    font-weight: 400;
+    font-size: 1.25em;
+}
+
+.info .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.info .row .right{
+    color: var(--secondary-text);
+}
+
+.info .vizualize{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info .vizualize .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vizualize .left span{
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+
+section.reorder{
+    background-color: var(--base);
+    padding: 0 20px 60px 20px;
+    border-radius: 12px;
+    margin: 10px;
+    position: relative;
+}
+
+.reorder .row{
+    display: flex;
+    flex-direction: column;
+    color: var(--secondary-text);
+    font-size: 0.75em;
+}
+
+.reorder .row select{
+    border-radius: 8px;
+    border: 1px solid var(--background);
+    padding: 8px;
+    color: var(--secondary-text);
+}
+
+.reorder #done{
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    border-radius: 8px;
+    color: var(--base);
+    background-color: var(--green);
+    padding: 10px 16px;
+    font-size: 0.875em;
+    border: none;
+}
