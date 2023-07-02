@@ -82,7 +82,20 @@ img {
 
 .nav-side ul {
     list-style-type: none;
+    padding-inline-start: 0;
+}
 
+.nav-side a{
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.nav-side i{
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
 }
 
 .wrapper>.content {
